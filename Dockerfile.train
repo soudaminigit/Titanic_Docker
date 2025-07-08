@@ -1,0 +1,11 @@
+# Dockerfile.train
+
+FROM python:3.11-slim
+
+WORKDIR /train
+
+COPY train_model.py .
+
+RUN pip install pandas scikit-learn
+
+CMD ["python", "train_model.py"]

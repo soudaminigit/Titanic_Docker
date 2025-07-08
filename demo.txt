@@ -1,0 +1,25 @@
+
+
+docker --version          # Shows installed Docker version
+docker info               # Shows system-wide Docker info
+docker pull python:3.11         # Pull image from Docker Hub
+docker images                   # List downloaded images
+docker rmi python:3.11          # Remove a specific image
+docker run hello-world                 # Run test image
+docker run -it ubuntu /bin/bash  (busybox)       # Interactive shell
+docker run -d nginx                    # Run NGINX in detached mode
+docker run -p 5000:5000 myapp          # Expose port 5000
+docker ps                             # List running containers
+docker ps -a                          # List all containers
+docker stop <container_id>           # Stop a running container
+docker start <container_id>          # Start a stopped container
+docker restart <container_id>        # Restart a container
+docker rm <container_id>             # Remove a container
+docker run -v $(pwd):/app -it ubuntu  # Mount local dir into container
+docker exec -it <container_id> /bin/bash     # Start bash shell inside running container
+docker exec <container_id> ls /app           # Run command inside container
+docker system prune               # Remove all stopped containers, unused networks/images
+docker rm $(docker ps -aq)        # Remove all containers
+docker rmi $(docker images -q)    # Remove all images
+
+
